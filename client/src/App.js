@@ -12,7 +12,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-      <FormikForm setUsers={setUsers} users={users}/>
+      <FormikForm key={1}/>
       <NewUserGrid setUsers={setUsers} users={users}/>
     </div>
   );

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Form, Field, withFormik, } from "formik";
 import * as Yup from 'yup';
 
-const NewUserForm = ({ errors, status, users, setUsers }) => {
+const NewUserForm = ({ errors, status }) => {
   useEffect(() => {
     if(status) {
       console.log(status);
@@ -11,7 +11,7 @@ const NewUserForm = ({ errors, status, users, setUsers }) => {
   }, [status])
 
   return ([
-    <div className="user-form">
+    <div key={2} className="user-form">
       <h1>New User Form</h1>
       <Form>
         <Field type="text" name="username" placeholder="Username" />
@@ -20,7 +20,7 @@ const NewUserForm = ({ errors, status, users, setUsers }) => {
         <Field type="password" name="password" placeholder="Password" />
         {errors.password && <p className="error">{errors.password}</p>}
 
-        <button type="submit">Submit!</button>
+        <button type="submit">Submit</button>
       </Form>
     </div>
   ]);
